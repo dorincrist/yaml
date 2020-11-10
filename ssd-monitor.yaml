@@ -1,11 +1,10 @@
-#kubectl label node k8s-worker disk=ssd
-apiVersion=: apps/v1
+apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: ssd-monitor
 spec:
   selector:
-    mathLabels:
+    matchLabels:
       app: ssd-monitor
   template:
     metadata:
